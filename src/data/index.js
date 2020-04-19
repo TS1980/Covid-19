@@ -14,5 +14,13 @@ export const fetchData = async () => {
 
         return modifiedData;
     } 
-    catch (error) {}
+    catch(error) {}
+}
+
+export const fetchDay = async () => {
+    try {
+        const {data} = await axios.get(`${api}/daily`);
+        console.log(data);
+    }
+    catch(error) {}
 }
