@@ -1,5 +1,6 @@
 import React from "react";
 import {Card, CardContent, Grid, Typography} from "@material-ui/core";
+import CountUp from "reatc-countup";
 import styles from "./Cards.module.css";
 
 const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
@@ -9,7 +10,7 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
     return(
         <div className={styles.container}>
             <Grid container justify="center" spacing={3}>
-                <Grid color="main" blueGrey item component={Card}>
+                <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Infected</Typography>
                         <Typography variant="h5">{confirmed.value}</Typography>
@@ -20,7 +21,7 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                 <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Recovered</Typography>
-                        <Typography variant="h5">Data</Typography>
+                        <Typography variant="h5">{recovered.value}</Typography>
                         <Typography color="textSecondary">Date</Typography>
                         <Typography variant="body2">Number of covered from COVID-19</Typography>
                     </CardContent>
@@ -28,7 +29,7 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                 <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Deaths</Typography>
-                        <Typography variant="h5">Data</Typography>
+                        <Typography variant="h5">{deaths.value}</Typography>
                         <Typography color="textSecondary">Date</Typography>
                         <Typography variant="body2">Number of deaths from COVID-19</Typography>
                     </CardContent>
