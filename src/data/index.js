@@ -24,7 +24,7 @@ export const fetchDay = async () => {
             confirmed: dailyData.confirmed.total,
             deaths: dailyData.deaths.total,
             date: dailyData.reportDate
-        }))
+        }));
 
         return modifiedData;
     }
