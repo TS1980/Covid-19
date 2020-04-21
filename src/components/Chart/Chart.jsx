@@ -39,8 +39,8 @@ const Chart = (props) => {
   );
 
     return(
-        <div>
-            
+        <div className={styles.container}>
+            {lineChart}
         </div>
     );
 }

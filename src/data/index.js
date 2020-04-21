@@ -28,5 +28,5 @@ export const fetchDay = async () => {
 
         return modifiedData;
     }
-    catch(error) {}
+    catch(error) {console.log("Error in fetchDay!")}
 }
