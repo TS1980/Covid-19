@@ -7,7 +7,8 @@ import {fetchData} from "./data";
 
 class App extends Component {
     state = {
-         data: {}
+         data: {},
+         country: ""
      }
 
     async componentDidMount() {
@@ -15,13 +16,19 @@ class App extends Component {
         this.setState({data: fetched});
     }
 
+    handleCountry = async (country) => {
+        const data = await fetchData(country);
+        this.setState({data, country: country});
+    }
+
     render() {
         const data = this.state.data;
+        const country = this.state.country;
         return(
             <div className={styles.container}>
                 <Cards data={data}/>
-                <Chart/>
-                <Counrty/>
+                <Chart data={data} country={country}/>
+                <Counrty handleCountry={this.handleCountry}/>
             </div>
         );
     }

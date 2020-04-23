@@ -14,7 +14,7 @@ export const fetchData = async () => {
 
         return modifiedData;
     } 
-    catch(error) {}
+    catch(error) {console.log("Error in fetchData!")}
 }
 
 export const fetchDay = async () => {
@@ -30,3 +30,12 @@ export const fetchDay = async () => {
     }
     catch(error) {console.log("Error in fetchDay!")}
 }
+
+export const fetchCountries = async () => {
+  try {
+    const { data: { countries } } = await axios.get(`${api}/countries`);
+
+    return countries.map((country) => country.name);
+  } 
+  catch(error) {console.log("Error in fetchCountries!")}
+};
