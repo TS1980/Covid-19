@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Cards from "./components/Cards/Cards";
 import Chart from "./components/Chart/Chart";
 import Counrty from "./components/Country/Country";
+import Content from "./components/Content/Content.jsx";
 import styles from "./App.module.css";
 import {fetchData} from "./data";
 
@@ -29,6 +30,7 @@ class App extends Component {
                 <Cards data={data}/>
                 <Chart data={data} country={country}/>
                 <Counrty handleCountry={this.handleCountry}/>
+                <Content/>
             </div>
         );
     }

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.container {
+	display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif
+}
+
+.text {
+	text-align: left;
+	margin: 5px;
+}
+
+.head {
+	
+}
